@@ -1,11 +1,11 @@
 <style> button {
-  float: center ;
+  float: left ;
   font-family: Verdana;
   margin: 20px;
+  width:380px;
+  height:380px;
   }
 #employee-1 {
-  width;360px;
-  height:360px;
   font-size:24px;
   font-family: "Roboto Slab","Georgia";
   color: black;
@@ -18,9 +18,7 @@
 }
 
 #employee-2 {
-width:380px;
-  height:380px;
-  font-size:20px;
+  font-size:24px;
   font-family: "Cochin","Georgia";
   color: black;
   background-color: yellow;
@@ -31,9 +29,7 @@ width:380px;
 }
 
 #employee-3 {
-width:360px;
-  height:360px;
-  font-size:20px;
+  font-size:24px;
   font-family: "Cochin","Georgia";
   color: black;
   background-color: yellow;
@@ -44,9 +40,7 @@ width:360px;
 }
 
 #employee-4 {
-width:360px;
-  height:360px;
-  font-size:20px;
+  font-size:24px;
   font-family: "Cochin","Georgia";
   color: black;
   background-color: yellow;
@@ -57,16 +51,17 @@ width:360px;
 } 
 </style>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
 
 <div style="font-family:Trebuchet MS" ><h1> Welcome to the Roosevelt Island Senior Center Employee Rating and Review Page! </h1></div>
 <div style="font-family: Comic Sans MS"> <h2> Tap the employee that you wish to rate and/or review from the grid below!</h2></div>
 <button id="employee-1"> <img src="https://raw.githubusercontent.com/Double-0-Se7en/ConnectPear/master/ChrisBrown.JPG" alt="David King">
-  <div id="dave">David King</div> </button>
-<button id="employee-2"> <img src="https://raw.githubusercontent.com/Double-0-Se7en/ConnectPear/master/BeyonceKnowles.JPG" alt="Jessica Miller"><div id= "jess">Jessica Miller</div> </button>
-<button id="employee-3"> <img src="https://raw.githubusercontent.com/Double-0-Se7en/ConnectPear/master/Jessica%20Miller.JPG" alt="Imani Guzman"><div id = "imani"> Imani Guzman </div> </button>
-<button id="employee-4"> <img src="https://raw.githubusercontent.com/Double-0-Se7en/ConnectPear/master/TedCruz.JPG" alt="Ted Black"><div id="ted"> Henry Still</div>  </button>
+  <div id="dave">David King <span class="star" id="davestar"><span class="hollowstar"> &#9734 </span> <span class="filledstar"> &#9733 &#9733 &#9733 &#9733 &#9733 </span> </span> </div> </button>
+<button id="employee-2"> <img src="https://raw.githubusercontent.com/Double-0-Se7en/ConnectPear/master/BeyonceKnowles.JPG" alt="Jessica Miller"><div id= "jess">Jessica Miller <span class="star" id="davestar"><span class="hollowstar"> &#9734 </span> <span class="filledstar"> &#9733 &#9733 &#9733 &#9733  </span> </span></div> </button>
+<button id="employee-3"> <img src="https://raw.githubusercontent.com/Double-0-Se7en/ConnectPear/master/Jessica%20Miller.JPG" alt="Imani Guzman"><div id = "imani"> Imani Guzman <span class="star" id="davestar"><span class="hollowstar"> &#9734 </span> <span class="filledstar"> &#9733 &#9733 &#9733 </span> </span></div> </button>
+<button id="employee-4"> <img src="https://raw.githubusercontent.com/Double-0-Se7en/ConnectPear/master/TedCruz.JPG" alt="Ted Black"><div id="ted"> Henry Still <span class="star" id="davestar"><span class="hollowstar"> &#9734 </span> <span class="filledstar"> &#9733 &#9733 </span> </span></div>  </button>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $('#employee-1').hover(function()  { 
    $('#dave').css("text-decoration","underline");
@@ -103,5 +98,16 @@ $('#employee-4').mouseleave(function()  {
    $('#ted').css("text-decoration","");
    $('#employee-4').css("background-color","");
 });
-
-</script> 
+</script>
+<script> 
+  $(".star").click(function () {
+  $(this).find(".filledstar").toggle ()
+  $(this).find(".hollowstar").toggle ()
+  })
+</script>
+<style>
+.filledstar  {
+  display:none
+}
+</style>
+  
