@@ -42,13 +42,17 @@ p{
 <p> Sunday, August 20th <span> Museum of Modern Art (MoMA) </span></p>
 <p> Friday, September 1st <span> Picnic at Central Park </span></p>
 <p> Saturday, September 9th <span> Ellis Island</span></p> 
-
 <style>
   button{
-  width: 300px;
-  height: 80px;
+  width: 200px;
+  height: 50px;
   font-size: 30px;
 }
 </style>
-
 <button> Register </button>
+</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+ $(".register").on("click",function(){
+  window.alert("You are now register!!")
+});
