@@ -1,12 +1,54 @@
-<h1 style="text-align:center"> Classes</h1>
-<h2> Here are some of the classes at the Roosevelt Island Senior Center!</h2>
-<body>
+<body><h1 style="text-align:center;font-family:Georgia;"> Classes</h1>
+
+<h2>Here are some of the classes at the Roosevelt Island Senior Center!</h2>
+
+
+
+
 <ul>
-  <li> Exercise <span> Mon &amp; Wed at 2:30 pm </span> </li>
-  <li> Art <span> Tues &amp; Thurs at 1:00 pm </span> </li>
-  <li> Tech Help <span> Mon &amp; Fri at 1:00 pm </span> </li>
-  <li> Acting <span> Fri &amp; Sat at 12:00 pm </span> </li>
-  <li> Dollmaking Mon, Tues, Wed at 11:00 am </span> </li>
-  <li> Sewing <span> Thurs &amp; Fri at 3:30 pm </span> </li>
+  <li> <button class="exercise">Exercise</button> <span> .........................................................................................................................<button class= "exercise">Mon &amp; Wed at 2:30 pm</button> </span> </li>
+  <li><button class= "art"> Art</button> <span> .................................................................................................................................<button class= "art">Tues &amp; Thurs at 1:00 pm</button> </span> </li>
+  <li> <button class= "tech">Tech Help</button> <span> .......................................................................................................................<button class= "tech">Mon &amp; Fri at 1:00 pm</button> </span> </li>
+  <li> <button class="acting">Acting </button><span>............................................................................................................................<button class= "acting">Fri &amp; Sat at 12:00 pm</button> </span> </li>
+  <li><button class= "doll making">Doll making</button>................................................................................................................... <button class="doll making">Mon, Tues, Wed at 11:00 am </button> </li>
+  <li> <button class="sewing">Sewing</button> <span>........................................................................................................................<button class="sewing">Thurs &amp; Fri at 3:30 pm </span> </li>
 </ul> 
+<style>
+  h2{font-family:Georgia
+  
+}
+ul{font-family:Georgia
+  
+}
+</style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $(".exercise").on("click",function(){
+  window.alert("You've signed up for the exercise class on Mon and Wed at 2:30pm")
+});
+
+$(".art").on("click",function(){
+  window.alert("You've successfully signed up for the art class on Tues and Thurs at 2:30pm");
+});
+
+$(".exercise").on("click",function(){
+  window.alert("You've signed up for the exercise class on Mon and Wed at 2:30pm")
+});
+
+$(".tech").on("click",function(){
+  window.alert("You've signed up for the tech class on Mon and Fri at 1:00pm"); 
+});
+
+$(".acting").on("click",function(){
+  window.alert("You've signed up for the acting class on Fri and Sat at 12:00pm")
+});
+
+$(".doll making").on("click",function(){
+  window.alert("You've signed up for the doll making class on Mon, Tues, and Wed at 11:00pm")
+});
+
+$(".sewing").on("click",function(){
+  window.alert("You've signed up for the sewing class on Thurs and Fri at 3:30pm")
+});
+ </script>
 </body>
